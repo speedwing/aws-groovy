@@ -1,0 +1,32 @@
+println 'hello world'
+
+Person p = new Person("Gio", 35)
+
+println(p)
+
+println(bla(p))
+
+
+class Person {
+
+    final String name
+
+    final Integer age
+
+    Person(String name, Integer age) {
+        this.name = name
+        this.age = age
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}
+
+String bla(Person p) {
+    return p.name + " " + p.age
+}
